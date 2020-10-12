@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+    </head>
+    <body>
+        <header>
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+        <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./consultaEdificios.html">Edificios</a></li>
+            
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>REGISTRO DE EDIFICIOS</h1>
+                <form>
+                <div id="datosEstructurales">
+                    <fieldset>
+                        <legend>Datos del edificio</legend>
+                       
+                           <label>Nombre del Edificio:</label>
+                           <input type="text" name="nombre" placeholder="Nombre del Edificio" maxlength="50" required> 
+                          
+                           <button>Siguiente</button>
+                           <button>Cancelar</button>
+                        
+                    </fieldset>
+                </div>
+                <div id="datosAdministrativos">
+                    <fieldset>
+                        <legend>Datos de Administración del los edificios</legend>
+                        <label>idEdificio:</label>
+                        <input type="text" name="idEdificio" required maxlength="8" placeholder="########">
+                        <button>Atras</button>
+                        <button>Cancelar</button>
+                        <button>Guardar</button>
+                    </fieldset>
+                </div>
+                </form>
+                <a href="./consultaEdificios.html">Regresar</a>
+            </section>
+        </main>
+        <footer>
+            Elaborado por Carlos Eduardo Galván Salamanca
+        </footer>
+    </body>
+</html>
