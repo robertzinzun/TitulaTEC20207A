@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+    </head>
+    <body>
+        <header>
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+        <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
+            <li>Docentes</li>
+            <li>Actos</li>
+            <li><a href="./Evidencias/ConsultaEvidencias.html">Evidencias</a></li>
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>CREACIÓN DE EVIDENCIA</h1>
+                <form>
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>Datos de la evidencia</legend>
+                       
+                           <label>Número de evidencia:</label>
+                           <input type="number" name="idEvidencia" required> 
+                           <button>Buscar</button>
+                           <br>
+                           <label>Número de solicitud:</label>
+                           <input type="number" name="idSolicitud" required>
+                           <button>Buscar</button>
+                           <br>
+                           <label>Nombre:</label>
+                           <input type="text" name="nombre" placeholder="Nombre de la evidencia" maxlength="100" required> 
+                           <br>
+                           <label>Archivo:</label>
+                           <input type="text" name="archivo" placeholder="Pendiente" maxlength="100"> 
+                           <br>
+                          <label>Estatus:</label>
+                          <select>
+                            <option value="0">--Selecciona el estatus de la evidencia--</option>
+                            <option value="1">Autorizada</option>
+                            <option value="3">Pendiente</option>
+                            <option value="2">Rechazada</option>
+                          </select>
+                            <br>
+                        <button>Atras</button>
+                        <button>Cancelar</button>
+                        <button>Guardar</button>
+                    </fieldset>
+                </form>
+                <a href="./ConsultaEvidencias.html">Regresar</a>
+            </section>
+        </main>
+        <footer>
+            Elaborado por Yoryii
+        </footer>
+    </body>
+</html> 
