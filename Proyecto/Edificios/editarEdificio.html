@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <style>
+            header{
+             background-color: black; 
+             color:white;  
+            }
+            #miEstilo{
+                background-color: green;
+                color:black;
+            }
+            .miClase{
+                background-color: red;
+                border:1px;
+            }
+        </style>
+        <link href="css/bootstrap.css">
+    </head>
+    <body>
+        <header id="miEstilo">
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+        <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./Edificios/consultaEdificios.html">Edificios</a></li>
+           
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>EDICIÓN DE LOS DATOS DEL Edificio</h1>
+                <form>
+                <div id="datosEstructurales">
+                    <fieldset>
+                        <legend>Datos del Edificio</legend>
+                          
+                           <label>Nombre :</label>
+                           <input type="text" name="nombre" placeholder="Nombre" maxlength="100" value="Centro de Computo" required> 
+                           
+                           <button>Siguiente</button>
+                           <button>Cancelar</button>    
+                    </fieldset>
+                </div>
+                <div id="datosAdministrativos">
+                    <fieldset>
+                        <legend>Datos de Administración del los edificios</legend>
+                        <label>ID:</label>
+                        <input type="text" name="idEdificio" required maxlength="8" value="01" readonly>
+                       
+                        <button>Atras</button>
+                        <button>Cancelar</button>
+                        <button>Guardar</button>
+                    </fieldset>
+                </div>
+                </form>
+                <a href="./consultaEdificios.html">Regresar</a>
+            </section>
+        </main>
+        <footer>
+            Elaborado por Carlos Eduardo Galván Salamanca
+        </footer>
+    </body>
+</html>
