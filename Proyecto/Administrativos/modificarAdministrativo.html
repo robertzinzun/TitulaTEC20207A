@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <style>
+            header{
+             background-color: black; 
+             color:white;  
+            }
+            #miEstilo{
+                background-color: green;
+                color:black;
+            }
+            .miClase{
+                background-color: red;
+                border:1px;
+            }
+        </style>
+        <link href="css/bootstrap.css">
+    </head>
+    <body>
+        <header id="miEstilo">
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+        <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./Administrativos/AltaAdministrativo.html">Administrativos</a></li>
+            <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
+            <li>Docentes</li>
+            <li>Actos</li>
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>MODIFICAR DATOS DEL ADMINISTRATIVO</h1>
+                <form>
+                <div id="datosAdmin">
+                    <fieldset>
+                        <legend>Datos del Administratvo</legend>
+                           <label>No Empleado:</label>
+                           <input type="number" value="1" name="noEmpleado" readonly>
+                           <br>
+                           <br>
+                           <label>Puesto:</label>
+                           <input type="text" name="puesto" placeholder="Puesto" maxlength="100" required> 
+                           <br>
+                           <br>
+                           <label>Estatus:</label>
+                           <input type="radio" name="estatus" value="A" checked>Activo
+                           <input type="radio" name="estatus" value="I">Inactivo
+                           <br>
+                           <br>
+                           <label>idUsuario:</label>
+                           <input type="number" value="1" name="idUsuario" readonly>
+                           <br>
+                           <br>
+                           <button>Guardar</button> 
+                           <button>Cancelar</button> 
+                    </fieldset>
+                
+        </main>
+        <footer>
+            Elaborado por Jorge Lozornio Vazquez
+        </footer>
+    </body>
+</html>

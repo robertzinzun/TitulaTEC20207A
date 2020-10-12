@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+
+
+<head>
+    <title> TitulaTec/Consuta</title>
+</head>
+<body>
+    <header>
+       <h1>INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1> 
+    </header>
+    
+        <fieldset>
+            <legend>Comentarios</legend>
+            <label>IdComentario</label>:</label>
+            <input type="text" name="IdComentarios" required maxlength="8" placeholder=" ">
+            <br>
+            <label>IdEvidencia:</label>
+            <input type="text" name=" IdEvidencia" required maxlength="8" placeholder=" ">
+            <br>
+            <label>IdUsuario:</label>
+            <input type="text" name=" IdUsuario" required maxlength="8" placeholder=" ">
+            <br>
+            <label>Observaciones:</label>
+            <select>
+                <option value="0">--Seleccione una opcion--</option>
+                <option value="1">Falta llenar datos</option>
+                <option value="2">Documento erroneo</option>
+                <option value="3">Faltan Datos</option>
+                <option value="4">Fuera de la fecha de entrega</option>
+                <option value="5">Otro</option>
+            </select>
+        
+            <br>
+            <label>Fecha:</label>
+            <input type="date" id="start" name="trip-start"  value="2018-07-22" min="2018-01-01" max="2018-12-31">
+        </fieldset>
+
+            <button>Atras</button>
+            <button>Cancelar</button>
+            <button>Guardar</button>
+            
+</body>
+</html>
