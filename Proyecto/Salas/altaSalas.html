@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Creacion Salas</title>
+    </head>
+    <body>
+        <header>
+            TITULA TEC
+        </header>
+        
+        
+        <main>
+            <section>
+                <h1>REGISTRO DE SALAS</h1>
+                <form>
+                <div id="datosSalas">
+                    <fieldset>
+                        <legend>Datos Salas</legend>
+
+                        <label>idSala:</label>
+                        <input type="number" name="idSala" placeholder="Numero id" maxlength="100" required>
+                        <br>
+                        <label>Nombre:</label>
+                        <input type="text" name="Nombre" placeholder="Nombre" maxlength="100" required>
+                        <br>
+                        <label>idEdificio:</label>
+                        <input type="text" name="idEdificio" placeholder="idEdificio" maxlength="50" required>
+                        <br>
+                        
+                        <input type="hidden" name="tipo" value="E">
+                        <input type="hidden" name="estatus" value="I">
+                        <button>Siguiente</button>
+                        <button>Cancelar</button>
+
+                    </fieldset>
+                
+                </form>
+                <a href="./ConsultaAlumnos.html">Regresar</a>
+            </section>
+        </main>
+        
+    </body>
+</html>
