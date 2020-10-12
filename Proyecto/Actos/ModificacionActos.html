@@ -1,0 +1,75 @@
+<!Doctype HTML>
+<html LANG="ES">
+    <head>
+        <meta charset="utf-8">
+        <title>TitulaTec</title>
+    </head>
+ 
+    <body>
+        
+        <main>
+            <section>
+                <h1>EDICIÓN DE ACTOS</h1>
+                <form>
+                <div id="infoActos">
+                    <fieldset>
+                        <legend>Datos</legend>
+                           <label>ID:</label>
+                           <input type="number" value="1" name="idActo" readonly>
+                           <br>
+                           <label>Fecha de registro:</label>
+                           <input type="date" name="fechaRegistro" placeholder="Fecha"  required> 
+                           <br>
+                           <label>Fecha de presentacion:</label>
+                           <input type="date" name="fechaPresentacion" placeholder="Fecha"  required> 
+                           <br>
+                           <label>Hora de inicio:</label>
+                           <input type="time" name="horaInicio" placeholder="Hora" required>
+                           <br>
+                           <label>Hora de fin:</label>
+                           <input type="time" name="horaFin" placeholder="Hora" required>
+                           <br>
+                           <label>Dictamen:</label>
+                           <input type="text" name="dictamen" placeholder="Dictamen" value="" required> 
+                           <br>
+                           <label>Estatus:</label>
+                        <select>
+                            <option value="0">--Elige un Estatus--</option>
+                            <option value="1" selected>A</option>
+                            <option value="2">T</option>
+                        </select>
+                           <br>
+                           <label>Id de Sala:</label>
+                           <input type="number" value="1" name="idSala" readonly>
+                           <br>
+                           <label>Nombre del docente presidente:</label>
+                           <input type="text" value="Francisco Hernandez" placeholder="Nombre completo" name="nombreDocente" required>
+                           <br>
+                           <label>Numero del docente secretario:</label>
+                           <input type="text" value="Roberto Suarez" placeholder="Nombre completo" name="nombreSecretario" required>
+                           <br>
+                           <label>Numero del docente vocal:</label>
+                           <input type="text" value="Jorge Prado" placeholder="Nombre completo" name="nombreVocal" required>
+                           <br>
+                           <label>Id de solicitud:</label>
+                           <input type="number" value="5" name="idSolicitud" readonly>
+                           <br>
+                           <label>Numero de libro:</label>
+                           <input type="number" value="32" name="numLibro" required>
+                           <br>
+                           <label>Numero de foja:</label>
+                           <input type="number" value="33" name="numFoja" required>
+                           <br>
+                             <button>Cancelar</button>
+                        <button>Guardar</button>
+                    </fieldset>
+                </div>
+                
+                </form>
+            </section>
+        </main>
+        <footer>
+            Elaborado por IJGM
+        </footer>
+ </body>
+    </html>
