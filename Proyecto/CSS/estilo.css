@@ -1,0 +1,94 @@
+label{
+    color:#3399CC;
+    font-size: medium;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-decoration: solid;
+    text-align: center;
+}
+header{
+    width: 80%;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 1px;
+    border: 5px solid black;
+    border-radius: 50px 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+footer{
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px solid black;
+    height: 50px;
+    width: 80%;
+    background-color: aliceblue;
+    border-radius: 50px 50px;
+    
+}
+/*
+#datosPersonales{
+    background-image: url('../Imagenes/fondo.jpg');
+}
+*/
+body{
+    background-image: url('../Imagenes/fondo.jpg');
+    background-size: contain;
+}
+#textoEncabezado{
+    color:black;
+    font-weight: 300;
+    padding: 100px;
+    text-align: center;
+    
+}
+#textoPiePagina{
+    color:black;
+    font-weight: bold;
+    font-size: medium;
+    padding: 80;
+    text-align: center;
+}
+fieldset{
+    margin-left:5%;
+    margin-right: 5%;
+    width: 50%;
+    background-color:rgb(211, 219, 219);
+}
+section{
+    margin-left:10%;
+    margin-right: 10%;
+}
+nav{
+    margin-left:10%;
+    margin-right: 10%;
+}
+button{
+    border-radius: 50px 50px;
+    background-color: crimson;
+    color:black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+input[type=text],[type=password],[type=number],[type=tel],[type=email],select{
+    background-color: honeydew;
+    color:black;
+    font-weight: bold;
+   
+}
+.linkButton{
+    border-radius: 50px 50px;
+    background-color:rgb(105, 32, 5);
+    color:white;
+    font-weight: bold;
+    border: 1px solid black;
+    text-decoration: none;
+}
+legend{
+    color:rgb(18, 16, 19);
+    background-color: rgb(139, 243, 243);
+    border: 1px solid black;
+    border-radius: 5px 5px;
+}
