@@ -8,22 +8,18 @@ label{
     text-align: center;
 }
 header{
-    width: 80%;
-    height: 200px;
+    height: 100%;
     background-color: aliceblue;
     margin: 1px;
     border: 5px solid black;
     border-radius: 50px 50px;
-    margin-left: 5%;
-    margin-right: 5%;
+    
     
 }
 footer{
-    margin-left: 5%;
-    margin-right: 5%;
+    clear: both;
     border: 5px solid black;
     height: 50px;
-    width: 80%;
     background-color: aliceblue;
     border-radius: 50px 50px;
     
@@ -40,7 +36,7 @@ body{
 #textoEncabezado{
     color:black;
     font-weight: 300;
-    padding: 100px;
+    padding: 10px;
     text-align: center;
     
 }
@@ -48,7 +44,7 @@ body{
     color:black;
     font-weight: bold;
     font-size: medium;
-    padding: 80;
+    padding: 8px;
     text-align: center;
 }
 fieldset{
@@ -56,15 +52,13 @@ fieldset{
     margin-right: 5%;
     width: 50%;
     background-color:rgb(211, 219, 219);
+    opacity: 0.8;
 }
 section{
-    margin-left:10%;
+    margin-left:2%;
     margin-right: 10%;
 }
-nav{
-    margin-left:10%;
-    margin-right: 10%;
-}
+
 button{
     border-radius: 50px 50px;
     background-color: crimson;
@@ -80,15 +74,99 @@ input[type=text],[type=password],[type=number],[type=tel],[type=email],select{
 }
 .linkButton{
     border-radius: 50px 50px;
-    background-color:rgb(105, 32, 5);
+    background-color:black;
     color:white;
     font-weight: bold;
-    border: 1px solid black;
+    border: 2px solid red;
     text-decoration: none;
+    padding:1px;
+    margin:1px;
 }
 legend{
     color:rgb(18, 16, 19);
     background-color: rgb(139, 243, 243);
     border: 1px solid black;
     border-radius: 5px 5px;
+}
+nav{
+    float: left;
+    margin-left: 2%;
+    /*
+    margin:0px;
+    */
+    height: 400px;
+    padding: 0px;
+    width: 15%;  
+    background-color: lightgray;  
+    opacity: 0.9;
+
+}
+main{
+    float: right;
+    width: 75%;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(142, 155, 125);
+}
+li a{
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    border: 1px solid black;
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+}
+li a:hover{
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    height: 25px;
+}
+.textoMenu{
+    color:blueviolet;
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+    background-color:lightblue;
+    margin: 0px;
+    padding: 2px;
+
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+table{
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+    background-color: #555;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    width: 100px;
+}
+td{
+    border: 1px solid black;
+    background-color: aliceblue;
+    color:black;
+    text-align: center;
+    padding: 6px;
+}
+tr{
+    border: 1px solid black;
 }
