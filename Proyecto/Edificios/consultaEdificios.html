@@ -3,13 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <title>TitulaTEC</title>
+        <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
     </head>
     <body>
         <h1>LISTA DE Edificios</h1>
         <a href="./altaEdificio.html"><img src="../Imagenes/add.gif">Registrar Edificio</a>
-        <table border="1">
-            <th>id.Edificio</th>
-            <th>Nombre</th>
+        <table class="table table-bordered table-sm table-hover">
+            <thead class="table-info">
+                <th>id.Edificio</th>
+                <th>Nombre</th>
+            </thead>
+            <tr>
+                <td>01</td>
+                <td>Centro de Computo</td>
+                <td><a href="editarEdificio.html"><img src="../Imagenes/editar.png"></a></td>
+                <td><a href="eliminarEdificios.html" data-toggle="modal" data-target="#myModal"><img src="../Imagenes/eliminar.png"></a></td>
+            </tr>
             <tr>
                 <td>01</td>
                 <td>Centro de Computo</td>
@@ -17,6 +31,36 @@
                 <td><a href="eliminarEdificios.html"><img src="../Imagenes/eliminar.png"></a></td>
             </tr>
         </table>
+        <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Eliminación de Edificios</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+         ¿ Estas seguro de eliminar el edificio X ?
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
     </body>
     <a href="../principal.html">Regresar</a>
 </html>

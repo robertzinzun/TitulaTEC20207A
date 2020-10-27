@@ -3,13 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>TitulaTEC</title>
+        <script>
+            function saludar(){
+                alert('Hola mundo');
+            }
+            function limpiar(){
+                //Limpiar el contenido de las cajas de texto
+                alert("Limpiando las cajas de texo");
+            }
+        </script>
+        <script src="../JS/miScript.js"></script>
     </head>
-    <body>
+    <body onload="ocultarDivs()">
+        
         <header>
             INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
         </header>
         <nav>
-        <p>Menu</p>
+        <p onclick="alert('Presionaste el Menu')">Menu</p>
         <ul>
             <li><a href="./consultaEdificios.html">Edificios</a></li>
             
@@ -29,10 +40,14 @@
                            <label>idEdificio:</label>
                            <input type="text" name="idEdificio" required maxlength="8" placeholder="########">
                            <button>Siguiente</button>
+                           <button onclick="limpiar()">Limpiar</button>
                            <button>Cancelar</button>
-                        
+                           <button onclick="saludar()">Saludar</button>
+                           <button onclick="mostrarAlumno()">Mostrar alumno</button>
                     </fieldset>
                 </div>
+                <button onclick="mostrarDiv('datosEstructurales')">Mostrar Div</button>
+                <button onclick="ocultarDiv('datosEstructurales')">Ocultar Div</button>
                 </form>
                 <a href="./consultaEdificios.html">Regresar</a>
             </section>

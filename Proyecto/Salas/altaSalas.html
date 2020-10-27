@@ -3,12 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <title>Creacion Salas</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+        <link rel="stylesheet" href="../CSS/estilo.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
     </head>
     <body>
         <header>
             TITULA TEC
         </header>
-        
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="../Imagenes/logo_itesz.jpg" width="20px">
+                Logo</a>
+          
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../Alumnos/altaAlumno.html">Alumnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Docentes</a>
+              </li>
+          
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Catalogos
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Salas</a>
+                  <a class="dropdown-item" href="#">Opciones</a>
+                  <a class="dropdown-item" href="#">Edificios</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
         
         <main>
             <section>
@@ -17,21 +51,25 @@
                 <div id="datosSalas">
                     <fieldset>
                         <legend>Datos Salas</legend>
-
+                        <div class="col-sm-4">
+                        <div class="form-group">
                         <label>idSala:</label>
-                        <input type="number" name="idSala" placeholder="Numero id" maxlength="100" required>
-                        <br>
+                        <input class="form-control" type="number" name="idSala" placeholder="Numero id" maxlength="100" required>
+                        </div>
+                        </div>
+                        <div class="form-group">
                         <label>Nombre:</label>
-                        <input type="text" name="Nombre" placeholder="Nombre" maxlength="100" required>
-                        <br>
+                        <input class="form-control" type="text" name="Nombre" placeholder="Nombre" maxlength="100" required>
+                        </div>
+                        <div class="form-group">
                         <label>idEdificio:</label>
-                        <input type="text" name="idEdificio" placeholder="idEdificio" maxlength="50" required>
-                        <br>
+                        <input class="form-control" type="text" name="idEdificio" placeholder="idEdificio" maxlength="50" required>
+                        </div>
                         
                         <input type="hidden" name="tipo" value="E">
                         <input type="hidden" name="estatus" value="I">
-                        <button>Siguiente</button>
-                        <button>Cancelar</button>
+                        <button ><i class="fab fa-facebook-square"></i>Siguiente</button>
+                        <button class="btn btn-danger">Cancelar</button>
 
                     </fieldset>
                 
