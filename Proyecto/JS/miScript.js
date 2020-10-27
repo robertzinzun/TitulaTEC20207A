@@ -47,11 +47,14 @@ function mostrarAlumno(){
   +alumno.promedio+
   " Materias:"+alumno.materias_acreditadas[0]+","
   +alumno.materias_acreditadas[1]);
+  /*
   for(i=0;i<alumno.materias_acreditadas.length;i++){
     alert(alumno.materias_acreditadas[i].nombre_materia
         +" "+alumno.materias_acreditadas[i].calificacion
         +" "+alumno.materias_acreditadas[i].semestre);
-  }
+  }*/
+  for(materia in alumno.materias_acreditadas)
+    alert(alumno.materias_acreditadas[materia].nombre_materia);
   /*switch(alumno.promedio){
       case 70:
           alert("Debes mejorar");
