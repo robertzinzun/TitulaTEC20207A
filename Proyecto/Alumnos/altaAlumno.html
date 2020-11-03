@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>TitulaTEC</title>
         <link rel="stylesheet" href="../CSS/estilo.css">
+        <script src="../JS/alumnos.js"></script>
     </head>
     <body>
         <header>
@@ -11,7 +12,7 @@
                 INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
             </h1>
         </header>
-        <nav>
+        <nav class="nav">
         <p class="textoMenu">Menu</p>
         <ul>
             <li><a href="./Alumnos/ConsultaAlumnos.html" class="active">Alumnos</a></li>
@@ -27,20 +28,20 @@
         <main>
             <section>
                 <h1>REGISTRO DE ALUMNOS</h1>
-                <form>
+                <form onsubmit="return validar(this)">
                 <div id="datosPersonales">
                     <fieldset>
                         <legend>Datos Personales</legend>
                        
                            <label>Nombre completo:</label>
-                           <input type="text" name="nombre" placeholder="Nombre completo" maxlength="100" required> 
+                           <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" maxlength="100" required> 
                            <br>
                            <label>Sexo:</label>
                            <input type="radio" name="sexo" value="F" checked>Femenino
                            <input type="radio" name="sexo" value="M">Masculino
                            <br>
                            <label>Telefono:</label>
-                           <input type="tel" name="telefono" placeholder="###-###-####" maxlength="12" required>
+                           <input type="tel" name="telefono" id="telefono" placeholder="###-###-####" maxlength="12" required>
                            <br>
                            <label>Email:</label>
                            <input type="email" name="email" placeholder="algo@algo" maxlength="100" required>
@@ -55,7 +56,6 @@
                            <input type="hidden" name="estatus" value="I">
                            <button>Siguiente</button>
                            <button>Cancelar</button>
-                        
                     </fieldset>
                 </div>
                 <div id="datosEcolares">
@@ -65,13 +65,13 @@
                         <input type="text" name="nocontrol" required maxlength="8" placeholder="########">
                         <br>
                         <label>Año Egreso:</label>
-                        <input type="number" name="anioegreso" min="1994" max="2020" step="1" value="1994" required>
+                        <input type="number" name="anioegreso" min="1994" step="1" value="1994" required>
                         <br>
                         <label>Creditos:</label>
-                        <input type="number" name="credito" min="0" max="260" step="1" value="0" required>
+                        <input type="number" name="creditos" min="1" max="260" step="1" value="1" required>
                         <br>
                         <label>Carrera:</label>
-                        <select>
+                        <select name="carrera">
                             <option value="0">--Elige una Carrera--</option>
                             <option value="1">Ing. en Sistemas Computacionales</option>
                             <option value="2">Ing. en Tec. de la Información</option>
@@ -79,11 +79,13 @@
                         <br>
                         <button>Atras</button>
                         <button>Cancelar</button>
-                        <button>Guardar</button>
+                        <button type="submit">Guardar</button>
                     </fieldset>
                 </div>
                 </form>
-                <p>Un parrafo</p>
+                <div id="notificaciones">
+                </div>
+                <br>
                 <a href="./ConsultaAlumnos.html" class="linkButton">Regresar</a>
                 <a href="#" class="linkButton">Otro link</a>
             </section>

@@ -29,11 +29,6 @@ footer{
     position: relative;
     
 }
-/*
-#datosPersonales{
-    background-image: url('../Imagenes/fondo.jpg');
-}
-*/
 body{
     background-image: url('../Imagenes/fondo.jpg');
     background-size: contain;
@@ -42,8 +37,7 @@ body{
     color:black;
     font-weight: 300;
     padding: 10px;
-    text-align: center;
-    
+    text-align: center;    
 }
 #textoPiePagina{
     color:black;
@@ -63,7 +57,6 @@ section{
     margin-left:2%;
     margin-right: 10%;
 }
-
 button{
     border-radius: 50px 50px;
     background-color: crimson;
@@ -74,8 +67,7 @@ button{
 input[type=text],[type=password],[type=number],[type=tel],[type=email],select{
     background-color: honeydew;
     color:black;
-    font-weight: bold;
-   
+    font-weight: bold;   
 }
 .linkButton{
     border-radius: 50px 50px;
@@ -111,7 +103,7 @@ legend{
 main{
     float: right;
     width: 75%;
-}/*
+}
 ul{
     list-style-type: none;
     margin: 0px;
@@ -136,7 +128,6 @@ li a:hover{
     display: block;
     height: 25px;
 }
-*/
 .textoMenu{
     color:blueviolet;
     font-weight: bold;
@@ -162,7 +153,6 @@ table,th,td,tr{
     border: 1px solid black;
 }
 th{
-    
     background-color: #555;
     color:white;
     font-weight: bold;
@@ -177,19 +167,16 @@ td{
     padding: 6px;
 }
 
-p{
-    border-color:black;
-    border-style:solid;
-    border-width: 1px;
-    padding: 10px;
-    margin-left: 50%;
+#notificaciones{
+    margin-left: 5%;
+    color:red;
+    font-weight: bold;
+    width: 60%;
 }
 button:hover{
     background-color: greenyellow;
 }
-fieldset:hover{
-    background-color: yellow;
-}
+
 a:visited{
     color:purple;
 }
