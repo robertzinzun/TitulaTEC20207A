@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <style>
+            header{
+             background-color: black; 
+             color:white;  
+            }
+            #miEstilo{
+                background-color: green;
+                color:black;
+            }
+            .miClase{
+                background-color: red;
+                border:1px;
+            }
+            li{
+                color:aqua;
+                font-family: cursive;
+                font-weight: 200;
+            }
+        </style>
+        <link href="css/bootstrap.css">
+    </head>
+    <body>
+        <header id="miEstilo">
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+        <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
+            <li>Docentes</li>
+            <li>Actos</li>
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>EDICIÓN DE LOS DATOS DEL ALUMNO</h1>
+                <form>
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                           <label>ID:</label>
+                           <input type="number" value="1" name="idUsuario" readonly>
+                           <br>
+                           <label>Nombre completo:</label>
+                           <input type="text" name="nombre" placeholder="Nombre completo" maxlength="100" value="Maria Torres Lemus" required> 
+                           <br>
+                           <label>Sexo:</label>
+                           <input type="radio" name="sexo" value="F" checked>Femenino
+                           <input type="radio" name="sexo" value="M">Masculino
+                           <br>
+                           <label>Telefono:</label>
+                           <input type="tel" name="telefono" placeholder="###-###-####" value="351-178-6718" maxlength="12" required>
+                           <br>
+                           <label>Email:</label>
+                           <input type="email" name="email" placeholder="algo@algo" maxlength="100"  value="mtorres@gmail.com" required>
+                           <br>
+                           <label>Contraseña:</label>
+                           <input type="password" name="password" value="Hola123" placeholder="password" maxlength="20" required>
+                           <br>
+                           <label>Repite la Contraseña:</label>
+                           <input type="password" name="pwdrepite" placeholder="password" maxlength="20" required>
+                           <br>
+                           <input type="hidden" name="tipo" value="E">
+                           <input type="hidden" name="estatus" value="I">
+                           <button>Siguiente</button>
+                           <button>Cancelar</button>    
+                    </fieldset>
+                </div>
+                <div id="datosEcolares">
+                    <fieldset>
+                        <legend>Datos Escolares</legend>
+                        <label>No. Control:</label>
+                        <input type="text" name="nocontrol" required maxlength="8" value="14010911" readonly>
+                        <br>
+                        <label>Año Egreso:</label>
+                        <input type="number" name="anioegreso" min="1994" max="2020" step="1" value="2019" required>
+                        <br>
+                        <label>Creditos:</label>
+                        <input type="number" name="credito" min="0" max="260" step="1" value="260" required>
+                        <br>
+                        <label>Carrera:</label>
+                        <select>
+                            <option value="0">--Elige una Carrera--</option>
+                            <option value="1" selected>Ing. en Sistemas Computacionales</option>
+                            <option value="2">Ing. en Tec. de la Información</option>
+                        </select>
+                        <br>
+                        <button>Atras</button>
+                        <button>Cancelar</button>
+                        <button>Guardar</button>
+                    </fieldset>
+                </div>
+                </form>
+                <a href="./ConsultaAlumnos.html">Regresar</a>
+            </section>
+        </main>
+        <footer>
+            Elaborado por RSZ
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+label{
+    color:#3399CC;
+    font-size: medium;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-decoration: solid;
+    text-align: center;
+}
+header{
+    height: 100%;
+    background-color: aliceblue;
+    margin: 1px;
+    /*border: 5px solid black;*/
+    border-width: 5px;
+    border-style: dotted;
+    border-color: black;
+    border-radius: 50px 50px;
+    position: relative;
+    visibility: visible;
+    
+}
+footer{
+    clear: both;
+    border: 5px solid black;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 50px 50px;
+    position: relative;
+    
+}
+body{
+    background-image: url('../Imagenes/fondo.jpg');
+    background-size: contain;
+}
+#textoEncabezado{
+    color:black;
+    font-weight: 300;
+    padding: 10px;
+    text-align: center;    
+}
+#textoPiePagina{
+    color:black;
+    font-weight: bold;
+    font-size: medium;
+    padding: 8px;
+    text-align: center;
+}
+fieldset{
+    margin-left:5%;
+    margin-right: 5%;
+    width: 50%;
+    background-color:rgb(211, 219, 219);
+    opacity: 0.8;
+}
+section{
+    margin-left:2%;
+    margin-right: 10%;
+}
+button{
+    border-radius: 50px 50px;
+    background-color: crimson;
+    color:black;
+    font-weight: bold;
+    border: 1px solid black;
+}
+input[type=text],[type=password],[type=number],[type=tel],[type=email],select{
+    background-color: honeydew;
+    color:black;
+    font-weight: bold;   
+}
+.linkButton{
+    border-radius: 50px 50px;
+    background-color:black;
+    color:white;
+    font-weight: bold;
+    border: 2px solid red;
+    text-decoration: none;
+    padding:1px;
+    margin:1px;
+}
+legend{
+    color:rgb(18, 16, 19);
+    background-color: rgb(139, 243, 243);
+    border: 1px solid black;
+    border-radius: 5px 5px;
+}
+.nav{
+    float: left;
+    margin-left: 2%;
+    /*
+    margin:0px;
+    */
+    margin:10px 5px 50px 80px;
+    /*margin-top:100px;*/
+    height: 400px;
+    padding: 0px;
+    width: 15%;  
+    background-color: lightgray;  
+    opacity: 0.9;
+
+}
+main{
+    float: right;
+    width: 75%;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(142, 155, 125);
+}
+li a{
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    border: 1px solid black;
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+}
+li a:hover{
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    height: 25px;
+}
+.textoMenu{
+    color:blueviolet;
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+    background-color:lightblue;
+    margin: 0px;
+    padding: 2px;
+
+}
+/*
+.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+*/
+table,th,td,tr{
+    border: 1px solid black;
+}
+th{
+    background-color: #555;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    width: 100px;
+}
+td{
+    background-color: aliceblue;
+    color:black;
+    text-align: center;
+    padding: 6px;
+}
+
+#notificaciones{
+    margin-left: 5%;
+    color:red;
+    font-weight: bold;
+    width: 60%;
+}
+button:hover{
+    background-color: greenyellow;
+}
+
+a:visited{
+    color:purple;
+}

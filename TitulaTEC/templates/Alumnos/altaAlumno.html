@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/estilo.css')}}">
+        <script src="{{url_for('static',filename='JS/alumnos.js')}}"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="textoEncabezado">
+                INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+            </h1>
+        </header>
+        <nav class="nav">
+        <p class="textoMenu">Menu</p>
+        <ul>
+            <li><a href="/alumnos" class="active">Alumnos</a></li>
+            <li><a href="#" > Docentes</a></li>
+            <li><a href="#">Actos</a></li>
+            <li><a href="#">Opciones</a></li>
+            <li><a href="#">Aulas</a></li>
+            <li><a href="#">Edificios</a></li>
+            <li><a href="#">Administraticos</a></li>
+            <li><a href="#">Aulas</a></li>    
+        </ul>
+        </nav>
+        <main>
+            <section>
+                <h1>REGISTRO DE ALUMNOS</h1>
+                <form action="/alumnos/save" method="post" onsubmit="return validar(this)">
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                       
+                           <label>Nombre completo:</label>
+                           <input type="text" name="nombres" id="nombre" placeholder="Nombre completo" maxlength="100" required>
+                           <br>
+                           <label>Sexo:</label>
+                           <input type="radio" name="sexo" value="F" checked>Femenino
+                           <input type="radio" name="sexo" value="M">Masculino
+                           <br>
+                           <label>Telefono:</label>
+                           <input type="tel" name="telefono" id="telefono" placeholder="###-###-####" maxlength="12" required>
+                           <br>
+                           <label>Email:</label>
+                           <input type="email" name="email" placeholder="algo@algo" maxlength="100" required>
+                           <br>
+                           <label>Contraseña:</label>
+                           <input type="password" name="password" placeholder="password" maxlength="20" required>
+                           <br>
+                           <label>Repite la Contraseña:</label>
+                           <input type="password" name="pwdrepite" placeholder="password" maxlength="20" required>
+                           <br>
+                           <input type="hidden" name="tipo" value="E">
+                           <input type="hidden" name="estatus" value="I">
+                           <button>Siguiente</button>
+                           <button>Cancelar</button>
+                    </fieldset>
+                </div>
+                <div id="datosEcolares">
+                    <fieldset>
+                        <legend>Datos Escolares</legend>
+                        <label>No. Control:</label>
+                        <input type="text" name="nocontrol" required maxlength="8" placeholder="########">
+                        <br>
+                        <label>Año Egreso:</label>
+                        <input type="number" name="anioegreso" min="1994" step="1" value="1994" required>
+                        <br>
+                        <label>Creditos:</label>
+                        <input type="number" name="creditos" min="1" max="260" step="1" value="1" required>
+                        <br>
+                        <label>Carrera:</label>
+                        <select name="carrera">
+                            <option value="0">--Elige una Carrera--</option>
+                            <option value="1">Ing. en Sistemas Computacionales</option>
+                            <option value="2">Ing. en Tec. de la Información</option>
+                        </select>
+                        <br>
+                        <button>Atras</button>
+                        <button>Cancelar</button>
+                        <button type="submit">Guardar</button>
+                    </fieldset>
+                </div>
+                </form>
+                <div id="notificaciones">
+                </div>
+                <br>
+                <a href="/alumnos" class="linkButton">Regresar</a>
+                <a href="#" class="linkButton">Otro link</a>
+            </section>
+        </main>
+        <footer>
+            <h1 id="textoPiePagina">
+                 Elaborado por RSZ
+            </h1>
+        </footer>
+    </body>
+</html>

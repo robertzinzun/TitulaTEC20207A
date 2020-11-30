@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <link href="{{url_for('static',filename='CSS/estilo.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>LISTA DE ALUMNOS</h1>
+        <a href="/alumnos/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Registrar Alumno</a>
+        <table>
+            <th>No.Control</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Carrera</th>
+            <th>Creditos</th>
+            <th>Año Egreso</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            <tr>
+                <td>14010911</td>
+                <td>Maria Torres Lemus</td>
+                <td>F</td>
+                <td>mtorres@gmail.com</td>
+                <td>351-178-6718</td>
+                <td>Ing. en Sistemas Computacionales</td>
+                <td>260</td>
+                <td>2019</td>
+                <td><a href="/alumnos/edit"><img src="{{url_for('static',filename='Imagenes/editar.png')}}"></a></td>
+                <td><a href="/alumnos/delete"><img src="{{url_for('static',filename='Imagenes/eliminar.png')}}"></a></td>
+            </tr>
+        </table>
+    </body>
+    <a href="/login">Regresar</a>
+</html>
