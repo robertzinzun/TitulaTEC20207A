@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/bootstrap.min.css')}}">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <h1>LISTA DE Edificios</h1>
+        <a href="/edificios/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Registrar Edificio</a>
+        <table class="table table-bordered table-sm table-hover">
+            <thead class="table-info">
+                <th>id.Edificio</th>
+                <th>Nombre</th>
+            </thead>
+            {% for e in edificios %}
+                <tr>
+                    <td>{{e.idEdificio}}</td>
+                    <td>{{e.nombre}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+        <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Eliminación de Edificios</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+         ¿ Estas seguro de eliminar el edificio X ?
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+    </body>
+    <a href="../principal.html">Regresar</a>
+</html>

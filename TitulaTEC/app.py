@@ -1,7 +1,17 @@
-from flask import Flask,render_template,request,abort
+from flask import Flask,render_template,request,abort,redirect,url_for
+from modelo.models import db
+from modelo.models import Edificio
+from flask_sqlalchemy import SQLAlchemy
+
 app=Flask(__name__)
+#db=SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://titulatec_user:hola.123@localhost/Titulatec2020'
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 #rutas para el ingreso a la aplicacion
+
+
 @app.route('/')
 def inicio():
     #return 'Bienvenido a FLASK'
@@ -42,7 +52,7 @@ def guardar_alumno():
     try:
         nombre=request.form['nombre']
     except:
-        abort(500);
+        abort(500)
     return nombre
 @app.route('/alumnos/edit')
 def editarAlumno():
@@ -57,6 +67,29 @@ def consultarAlumnos():
     return render_template('Alumnos/ConsultaAlumnos.html')
 #fin del CRUD alumnos
 
+#CRUD Edificios
+@app.route('/edificios/new')
+def nuevoEdificio():
+    return render_template('Edificios/altaEdificio.html')
+@app.route('/edificios/save',methods=['POST'])
+def agregarEdificio():
+    try:
+        e=Edificio()
+        e.nombre=request.form['nombre']
+        e.insertar()
+        #return ''
+        return redirect(url_for('consultarEdificios'))
+    except:
+        abort(500)
+@app.route('/edificios')
+def consultarEdificios():
+    e=Edificio()
+    edificios=e.consultaGeneral()
+    return render_template('Edificios/consultaEdificios.html',edificios=edificios)
+
+#Fin CRUD
+
+
 @app.errorhandler(404)
 def error_404(e):
     return render_template('comunes/error_404.html'),404
@@ -66,4 +99,5 @@ def error_500(e):
     return render_template('comunes/error_500.html'),500
 
 if __name__=='__main__':
+    db.init_app(app)
     app.run(debug=True)
