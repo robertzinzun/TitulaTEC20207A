@@ -8,32 +8,24 @@
         <header id="miEstilo">
             INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
         </header>
-        <nav>
-        <p>Menu</p>
-        <ul>
-            <li><a href="./consultaEdificios.html">Edificios</a></li>
-           
-        </ul>
-        </nav>
         <main>
             <section>
                 <h1>EDICIÓN DE LOS DATOS DEL Edificio</h1>
-                <form>
+                <form action="/edificios/modificar" method="post">
                 <div id="datosEstructurales">
                     <fieldset>
                         <legend>Datos del Edificio</legend>
-                          
-                           <label>Nombre :</label>
-                           <input type="text" name="nombre" placeholder="Nombre" maxlength="50" value="Centro de Computo" required> 
-                           <br>
                            <label>ID:</label>
-                           <input type="text" name="idEdificio" required maxlength="8" value="01" readonly>  
-                           <button>Siguiente</button>
-                           <button>Cancelar</button>    
+                           <input type="number" name="id" required value="{{edificio.idEdificio}}" readonly>
+                           <br>
+                           <label>Nombre:</label>
+                           <input type="text" name="nombre" placeholder="Nombre" maxlength="50" value="{{edificio.nombre}}" required>
+                           <br>
+                           <button>Guardar</button>
                     </fieldset>
                 </div>
                 </form>
-                <a href="./consultaEdificios.html">Regresar</a>
+                <a href="/edificios">Regresar</a>
             </section>
         </main>
         <footer>

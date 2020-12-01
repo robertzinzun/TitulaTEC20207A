@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,abort,redirect,url_for
 from modelo.models import db
-from modelo.models import Edificio
+from modelo.models import Edificio,Sala
 from flask_sqlalchemy import SQLAlchemy
 
 app=Flask(__name__)
@@ -87,9 +87,44 @@ def consultarEdificios():
     edificios=e.consultaGeneral()
     return render_template('Edificios/consultaEdificios.html',edificios=edificios)
 
+@app.route('/edificios/edit/<int:id>')
+def editarEdificio(id):
+    e = Edificio()
+    e.idEdificio=id
+    edificio=e.consultaIndividual()
+    return render_template('Edificios/editarEdificio.html',edificio=edificio)
+@app.route('/edificios/modificar',methods=['POST'])
+def modificarEdificios():
+    e=Edificio()
+    e.idEdificio=request.form['id']
+    e.nombre=request.form['nombre']
+    e.actualizar()
+    return redirect(url_for("consultarEdificios"))
+@app.route('/edificios/delete/<int:id>')
+def eliminarEdificio(id):
+    e=Edificio()
+    e.idEdificio=id
+    e.eliminar()
+    return redirect(url_for("consultarEdificios"))
 #Fin CRUD
-
-
+#crud de Salas
+@app.route('/salas')
+def consultarSalas():
+    s=Sala()
+    salas=s.consultaGeneral()
+    return render_template('Salas/ConsultaSalas.html',salas=salas)
+@app.route('/salas/new')
+def nuevaSala():
+    e = Edificio()
+    return render_template('Salas/altaSalas.html',edificios=e.consultaGeneral())
+@app.route('/salas/save',methods=['POST'])
+def guardarSala():
+    s=Sala()
+    s.nombre=request.form['nombre']
+    s.idEdificio=request.form['idEdificio']
+    s.insertar()
+    return redirect(url_for('consultarSalas'))
+#fin crud salas
 @app.errorhandler(404)
 def error_404(e):
     return render_template('comunes/error_404.html'),404

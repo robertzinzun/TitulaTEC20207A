@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+</head>
+<body>
+    <h1>Lista de Salas</h1>
+    <a href="/salas/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Agregar Sala</a>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>IDEficio</th>
+            <th>Edificio</th>
+            {% for s in salas %}
+                <tr>
+                    <td>{{s.idSala}}</td>
+                    <td>{{s.nombre}}</td>
+                    <td>{{s.edificio.idEdificio}}</td>
+                    <td>{{s.edificio.nombre}}</td>
+                </tr>
+            {% endfor %}
+        </thead>
+    </table>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>TitulaTEC</title>
+        <style>
+            header{
+             background-color: black; 
+             color:white;  
+            }
+            #miEstilo{
+                background-color: green;
+                color:black;
+            }
+            .miClase{
+                background-color: red;
+                border:1px;
+            }
+        </style>
+        <link href="css/bootstrap.css">
+    </head>
+    <body>
+        <header id="miEstilo">
+            INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+        </header>
+       
+        <main>
+            <section>
+                <h1>EDICIÓN DE SALAS</h1>
+                <form>
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>Datos Salas</legend>
+                           <label>IDSala:</label>
+                           <input type="number" value="1" name="idUsuario" readonly>
+                           <br>
+                           <label>Nombre completo:</label>
+                           <input type="text" name="nombre" placeholder="Nombre completo" maxlength="100" value="Maria Torres Lemus" required> 
+                           <br>
+                           <label>IDEdificio:</label>
+                           <input type="number" name="idEdificio" placeholder="idEdificio" maxlength="40" required>
+                           <br>
+                           <input type="hidden" name="tipo" value="E">
+                           <input type="hidden" name="estatus" value="I">
+                           <button>Siguiente</button>
+                           <button>Cancelar</button>    
+                    </fieldset>
+                
+                </div>
+                </form>
+                <a href="./ConsultaAlumnos.html">Regresar</a>
+            </section>
+        </main>
+        <footer>
+            Elaborado por Alejandro Fernandez Perez
+        </footer>
+    </body>
+</html>
