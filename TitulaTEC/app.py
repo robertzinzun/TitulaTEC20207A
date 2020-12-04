@@ -1,6 +1,8 @@
 from flask import Flask,render_template,request,abort,redirect,url_for
+from flask_login import LoginManager,current_user
+
 from modelo.models import db
-from modelo.models import Edificio,Sala
+from modelo.models import Edificio,Sala, Usuario
 from flask_sqlalchemy import SQLAlchemy
 
 app=Flask(__name__)
@@ -8,14 +10,22 @@ app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://titulatec_user:hola.123@localhost/Titulatec2020'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-
+#Configuración de la gestion Usuarios con Flask-Login
+login_manager=LoginManager()
+login_manager.init_app(app)
+login_manager.login_view="inicio"
 #rutas para el ingreso a la aplicacion
 
-
+@login_manager.user_loader
+def load_user(id):
+    return Usuario.query.get(int(id))
 @app.route('/')
 def inicio():
     #return 'Bienvenido a FLASK'
-    return render_template('index.html')
+    if current_user.is_athenticated:
+        return render_template('principal.html')
+    else:
+        return render_template('index.html')
 
 @app.route('/login')
 def login():
