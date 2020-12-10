@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>TitulaTEC</title>
+        <script src="{{url_for('static',filename='JS/bootstrap.min.js')}}"></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/bootstrap.min.css')}}">
+
     </head>
     <body>
         <header>
@@ -14,12 +17,17 @@
             <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
             <li>Docentes</li>
             <li>Actos</li>
+            {% if current_user.is_authenticated and (current_user.is_admin() or current_user.getTipo()=='D') %}
+                <li><a href="/pagos">Pagos</a></li>
+            {% endif %}
+            <li><a href="/edificios">Edificios</a></li>
+            <li><a href="/cerrarSesion">Cerrar Sesion</a></li>
         </ul>
         </nav>
         <main>
             <section>
                 Esta la sección principal
-                <p>El usuario activo es:<b>{{usuario}}</b></p>
+                <p>El usuario activo es:<b>{{current_user.nombre}}</b></p>
             </section>
             <aside>
                 Barra lateral

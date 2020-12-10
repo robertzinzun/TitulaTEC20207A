@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+</head>
+<body>
+    <h1>Registro de Usuarios</h1>
+    <form action="/guardarUsuario" method="post">
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" maxlength="100" required>
+        <br>
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="F" checked>Femenino
+        <input type="radio" name="sexo" value="M">Masculino
+        <br>
+        <label>Telefono:</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="###-###-####" maxlength="12" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="algo@algo" maxlength="100" required>
+        <br>
+        <label>Contraseña:</label>
+        <input type="password" name="password" placeholder="password" maxlength="20" required>
+        <br>
+        <label>Tipo:</label>
+        <select name="tipo">
+            <option value="E">Alumno</option>
+            <option value="A">Administrativo</option>
+            <option value="D">Docente</option>
+        </select>
+        <input type="hidden" name="estatus" value="A">
+        <button type="submit">Registrar</button>
+        <a href="/">Cancelar</a>
+    </form>
+</body>
+</html>

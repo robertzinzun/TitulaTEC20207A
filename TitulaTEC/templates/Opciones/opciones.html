@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="{{url_for('static',filename='JS/opciones.js')}}"></script>
+    <script src="{{url_for('static',filename='JS/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/bootstrap.min.css')}}">
+    <title>TitulaTEC</title>
+</head>
+<body onload="inicializarDivs()">
+    <div id="listadoGeneral">
+        <h3>Listado de Opciones</h3>
+        <a href="javascript:nuevo()" class="btn btn-primary">Nuevo</a>
+        <table id="datos" class="table">
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>EDITAR</th>
+            <th>ELIMINAR</th>
+        </table>
+        <a href="/" class="btn btn-danger">Regresar</a>
+    </div>
+    <div id="listadoIndividual">
+        <div id="titulo"></div>
+            <div class="form-group">
+            <label>ID:</label>
+            <input type="number" id="id" required readonly class="form-control">
+            </div>
+            <div class="form-group">
+            <label>NOMBRE:</label>
+            <input type="text" id="nombre" required placeholder="NOMBRE" class="form-control">
+            </div>
+            <div class="form-group">
+            <label>DESCRIPCION:</label>
+            <input type="text" id="descripcion" required placeholder="DESCRIPCION" class="form-control">
+            </div>
+            <div class="form-group">
+            <input type="button" value="Aceptar" onclick="aceptar()" class="btn btn-primary">
+            <input type="button" onclick="inicializarDivs()" value="Cancelar" class="btn btn-danger">
+            </div>
+    </div>
+</body>
+</html>

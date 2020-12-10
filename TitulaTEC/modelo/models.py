@@ -107,6 +107,40 @@ class Usuario(UserMixin,db.Model):
         return self.tipo
     def get_id(self):
         return self.idUsuario
+    def validar(self,email,password):
+        user=Usuario.query.filter_by(email=email,estatus='A').first()
+        if user!=None:
+            if user.validarPassword(password):
+                return user
+            else:
+                return None
+        else:
+            return None
+
+class Opcion(db.Model):
+
+    __tablename__='Opciones'
+    idOpcion=Column(Integer,primary_key=True)
+    nombre=Column(String,unique=True)
+    descripcion=Column(String)
+
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def consultaGeneral(self):
+        return self.query.all()
+
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+
+    def eliminar(self):
+        db.session.delete(self.consultaIndividual())
+        db.session.commit()
+
+    def consultaIndividual(self):
+        return self.query.get(self.idOpcion)
 
 class Alumnos():
     pass

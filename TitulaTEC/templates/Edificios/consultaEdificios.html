@@ -13,20 +13,26 @@
     </head>
     <body>
         <h1>LISTA DE Edificios</h1>
-        <a href="/edificios/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Registrar Edificio</a>
+        {% if current_user.is_authenticated and current_user.is_admin() %}
+            <a href="/edificios/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Registrar Edificio</a>
+        {% endif %}
         <table class="table table-bordered table-sm table-hover">
             <thead class="table-info">
                 <th>id.Edificio</th>
                 <th>Nombre</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                {% if current_user.is_authenticated and current_user.is_admin() %}
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                {% endif %}
             </thead>
             {% for e in edificios %}
                 <tr>
                     <td>{{e.idEdificio}}</td>
                     <td>{{e.nombre}}</td>
-                    <td><a href="/edificios/edit/{{e.idEdificio}}"><img src="{{url_for('static',filename='Imagenes/editar.png')}}"></a></td>
-                    <td><a href="javascript:eliminarEdificio({{e.idEdificio}},'{{e.nombre}}')"><img src="{{url_for('static',filename='Imagenes/eliminar.png')}}"></a></td>
+                    {% if current_user.is_authenticated and current_user.is_admin() %}
+                        <td><a href="/edificios/edit/{{e.idEdificio}}"><img src="{{url_for('static',filename='Imagenes/editar.png')}}"></a></td>
+                        <td><a href="javascript:eliminarEdificio({{e.idEdificio}},'{{e.nombre}}')"><img src="{{url_for('static',filename='Imagenes/eliminar.png')}}"></a></td>
+                    {% endif %}
                 </tr>
             {% endfor %}
 
@@ -35,7 +41,7 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Open modal
   </button>
-  
+  <p>{{current_user.nombre}}</p>
   <!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -62,5 +68,5 @@
     </div>
   </div>
     </body>
-    <a href="../principal.html">Regresar</a>
+    <a href="/">Regresar</a>
 </html>
